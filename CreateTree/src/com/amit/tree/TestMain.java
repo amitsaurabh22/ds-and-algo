@@ -6,7 +6,8 @@ public class TestMain {
 		// TODO Auto-generated method stub
 
 		int[] arr = { 1, 2, 4, 5, 6, 33, 55, 77, 55, 66, 77, 79 };
-		Node n = TreeUtils.arrayToTree(arr);
+		TNode n = TreeUtils.arrayToTree(arr);
+		TreeUtils.printTree(n);
 		System.out.print("pre order");
 		preOrder(n);
 		System.out.print("\nin order");
@@ -17,7 +18,7 @@ public class TestMain {
 
 
 
-	public static void preOrder(Node root) {
+	public static void preOrder(TNode root) {
 		if (root == null) {
 			return;
 		}
@@ -26,7 +27,7 @@ public class TestMain {
 		preOrder(root.right);
 	}
 
-	public static void inOrder(Node root) {
+	public static void inOrder(TNode root) {
 		if(root==null){
 			return;
 		}
@@ -35,7 +36,7 @@ public class TestMain {
 		inOrder(root.right);
 	}
 
-	public static void postOrder(Node root) {
+	public static void postOrder(TNode root) {
 		if (root == null) {
 			return;
 		}
